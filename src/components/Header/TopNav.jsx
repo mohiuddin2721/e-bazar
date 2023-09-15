@@ -62,7 +62,7 @@ function TopNav() {
                                 Dashboard
                             </NavLink> */}
                             <li>
-                                {!user && <NavLink href='/signIn'>Login</NavLink>}
+                                {!user && <NavLink to='/signIn'>Login</NavLink>}
                             </li>
                         </ul>
                     </div>

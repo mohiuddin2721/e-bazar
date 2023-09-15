@@ -1,0 +1,4 @@
+export const footerSocialButtonStyle = 'm-[2px] w-[38px] h-[38px] rounded-full border border-[#313438] text-white flex justify-center items-center hover:bg-[#3b5a9a] duration-500 cursor-pointer';
+export const footerPopularTagSpanStyle = 'inline-block my-1 px-[6.5px] leading-[11px] py-[6px] mr-1 border text-[#a8a8a8] border-[#313438] cursor-pointer hover:text-white hover:border-white duration-500';
+export const footerSubscribeButtonStyle = 'rounded-full text-white text-[13px] bg-[#08c] py-3 px-[27px] border border-[#08c] font-bold w-fit hover:bg-[#00a3f5] duration-500';
+export const footerInputStyle = 'py-2 mb-4 px-6 w-full border bg-[#292C30] rounded-full border-[#292C30] text-[#777]';

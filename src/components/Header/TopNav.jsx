@@ -11,6 +11,7 @@ import useUserRole from '../../Hooks/useUserRole';
 
 function TopNav() {
     const { user } = useContext(AuthContext)
+  
     const [userRole] = useUserRole()
     const [currentLang, setCurrentLang] = useState(languages[0]);
     const [currentCur, setCurrentCur] = useState(currencies[0]);
@@ -61,7 +62,7 @@ function TopNav() {
                                 Dashboard
                             </NavLink> */}
                             <li>
-                                {!user && <Link href='/signIn'>Login</Link>}
+                                {!user && <NavLink href='/signIn'>Login</NavLink>}
                             </li>
                         </ul>
                     </div>

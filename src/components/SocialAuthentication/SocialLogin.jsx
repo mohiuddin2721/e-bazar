@@ -68,7 +68,7 @@ const SocialLogin = () => {
       </div>
       {/* {googleError && <p className='text-red-500 text-xs'>{googleError}</p>} */}
       <div className="flex justify-between">
-        <div className="w-[48%]">
+        <div className="w-full">
           <button
             className="btn bg-[#120e43] hover:bg-[#120e43cf]"
             onClick={handleGoogleSignIN}

@@ -95,9 +95,9 @@ const SignIn = () => {
                             {
                                 showPassword
                                     ?
-                                    <RemoveRedEyeIcon className='text-[#70a2d4] ml-1' />
+                                    <RemoveRedEyeIcon className='text-[#70a2d4] ml-1 cursor-pointer' />
                                     :
-                                    <VisibilityOffIcon className='text-[#70a2d4] ml-1' />
+                                    <VisibilityOffIcon className='text-[#70a2d4] ml-1 cursor-pointer' />
                             }
                         </span>
                     </label>

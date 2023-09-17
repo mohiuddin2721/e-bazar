@@ -1,8 +1,7 @@
 import eng from '../assets/USA.svg';
-import esp from '../assets/ESP.svg';
-import fra from '../assets/FRA.svg';
-import por from '../assets/POR.svg';
-import ger from '../assets/GER.svg';
+import uae from '../assets/uae-flag.png';
+import bdFlag from '../assets/bangladesh-flag.png';
+import ind from '../assets/india-flag.png';
 import { format } from 'date-fns';
 import { TbReplace, TbTruckDelivery } from 'react-icons/tb';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -13,19 +12,18 @@ import { BiMailSend, BiMoney } from 'react-icons/bi';
 import { MdAdminPanelSettings, MdDashboard, MdManageAccounts, MdTipsAndUpdates } from 'react-icons/md';
 const today = format(new Date(), 'MMM dd').split(' ');
 
+
 export const languages = [
     { name: 'ENG', icon: eng, id: 1 },
-    { name: 'ESP', icon: esp, id: 2 },
-    { name: 'FRA', icon: fra, id: 3 },
-    { name: 'POR', icon: por, id: 4 },
-    { name: 'GER', icon: ger, id: 5 }
+    { name: 'UAE', icon: uae, id: 2 },
+    { name: 'IND', icon: ind, id: 3 },
+    { name: 'BD', icon: bdFlag, id: 4 },
 ];
 export const currencies = [
     { name: 'USD', symbol: '$', id: 1 },
     { name: 'EUR', symbol: '€', id: 2 },
     { name: 'GBP', symbol: '£', id: 3 },
     { name: 'RUB', symbol: '₽', id: 4 },
-    { name: 'JPY', symbol: '¥', id: 5 }
 ];
 // const categories: string[] = ['Category1', 'Category2', 'Category2', 'Category2', 'Category2', 'Category2', 'Category2', 'Category2', 'Category2'];
 export const brands = ['Brand1', 'Brand2', 'Brand3', 'Brand4', 'Brand5', 'Brand6', 'Brand7', 'Brand8', 'Brand9'];

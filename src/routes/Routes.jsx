@@ -32,7 +32,7 @@ import UpcomingProducts from "../pages/Home/UpcomingProducts";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>,
+        element: <Main />,
         errorElement: <DisplayError></DisplayError>,
         children: [
             {

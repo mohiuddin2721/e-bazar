@@ -10,8 +10,8 @@ const firebaseConfig = {
     projectId: import.meta.env.VITE_REACT_APP_projectId,
     storageBucket: import.meta.env.VITE_REACT_APP_storageBucket,
     messagingSenderId: import.meta.env.VITE_REACT_APP_messagingSenderId,
-    appId: import.meta.env.VITE_REACT_APP_appId,
-    measurementId:import.meta.env.VITE_REACT_APP_measurementId
+    appId: import.meta.env.VITE_REACT_APP_appId
+   
 
 };
 

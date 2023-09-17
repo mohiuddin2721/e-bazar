@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleIcon from "@mui/icons-material/Google";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+// import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import {
   FacebookAuthProvider,
   GoogleAuthProvider,
@@ -14,7 +14,7 @@ const SocialLogin = () => {
   const auth = getAuth(app);
   // const [googleError, setGoogleError] = useState("");
   const googleProvider = new GoogleAuthProvider();
-  const facebookProvider = new FacebookAuthProvider();
+  // const facebookProvider = new FacebookAuthProvider();
   const location = useLocation();
   const navigate = useNavigate();
   // console.log(auth);
@@ -49,17 +49,17 @@ const SocialLogin = () => {
       });
   };
 
-  const handleFacebookSignIN = () => {
-    signInWithPopup(auth, facebookProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        navigate(from, { replace: true });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const handleFacebookSignIN = () => {
+  //   signInWithPopup(auth, facebookProvider)
+  //     .then((result) => {
+  //       const user = result.user;
+  //       console.log(user);
+  //       navigate(from, { replace: true });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div>
@@ -79,7 +79,7 @@ const SocialLogin = () => {
             <GoogleIcon sx={{ fontSize: "15px" }} />
           </button>
         </div>
-        <div className="w-[48%]">
+        {/* <div className="w-[48%]">
           <button
             className="btn bg-[#120e43] hover:bg-[#120e43cf]"
             onClick={()=>handleFacebookSignIN}
@@ -89,7 +89,7 @@ const SocialLogin = () => {
             </span>
             <FacebookOutlinedIcon sx={{ fontSize: "15px" }} />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Button, Card, CardContent, Grid, IconButton, Rating } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { FiExternalLink } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export const ListSingleData = ({ item }) => {
@@ -10,6 +10,7 @@ export const ListSingleData = ({ item }) => {
     // console.log(item.imageURL[0])
     const firstImg = item.imageURL[0][0]
     const secondImg = item.imageURL[0][1]
+    const navigate = useNavigate();
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -18,6 +19,11 @@ export const ListSingleData = ({ item }) => {
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
+    const navigateToDetailPage = (id) => {
+        navigate(`/products/${id}`, { state: { item: item } })
+    };
+
+
 
     // console.log(item)
     return (
@@ -30,10 +36,13 @@ export const ListSingleData = ({ item }) => {
                 spacing={1}>
                 <Grid item xs={12} sm={12} md={5} lg={4}>
                     <div className='w-[70%] mx-auto'>
-                        <Link to={`/products/${item?._id}`}>
+                        <Box
+                            onClick={() => navigateToDetailPage(item._id)}
+                            className="cursor-pointer"
+                        >
                             <img
                                 className='w-full'
-                                src={isHovered ? `https://test-server-ten-psi.vercel.app/${secondImg}` : `https://test-server-ten-psi.vercel.app/${firstImg}`}
+                                src={isHovered ? `${secondImg}` : `${firstImg}`}
                                 alt=""
                                 style={{
                                     border: '5px outset #3665A4',
@@ -41,13 +50,18 @@ export const ListSingleData = ({ item }) => {
                                     transition: 'border-radius 0.3s ease-in-out',
                                 }}
                             />
-                        </Link>
+                        </Box>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={7} lg={8}>
                     <CardContent sx={{ paddingLeft: 4 }}>
-                        <p className='font-bold py-2'>{item?.name}</p>
-                        <p className='font-bold text-sm'>Brand: {item?.brand}</p>
+                        <p
+                            onClick={() => navigateToDetailPage(item._id)}
+                            className='font-bold py-2 cursor-pointer inline hover:underline'
+                        >
+                            {item?.name}
+                        </p>
+                        <p className='text-sm'>Brand: {item?.brand}</p>
                         <p>{item?.description}</p>
                         <p className='text-xl font-bold'>price: <span className='text-green-500'>${item?.price}</span></p>
                         <p className=''>colors: {item?.color}</p>
@@ -55,6 +69,7 @@ export const ListSingleData = ({ item }) => {
                             <Rating
                                 name="simple-controlled"
                                 value={item?.ratting}
+                                readOnly
                             />
                         </p>
                         <span className='absolute top-2 right-0 hidden'>
